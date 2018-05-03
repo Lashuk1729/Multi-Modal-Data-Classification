@@ -1,0 +1,1 @@
+[coeff,score]=pca(vec1');
