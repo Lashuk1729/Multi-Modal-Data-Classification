@@ -26,4 +26,4 @@ function [vec1, vec2, vec3, vec4] = Img2Vect(Image, row, col)
             vec4 = VectSol(Image,(row/2)+2,row,(col/2)+2,col);
         end
     end
-end
+    end%}
