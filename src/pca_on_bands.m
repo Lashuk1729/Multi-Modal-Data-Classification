@@ -33,8 +33,8 @@ end
 EAP3 = new1;
 for i = 1:size(new1,1)
     for j = 1:size(new1,2)
-        if(EAP2(i,j) < rand_arr(3))
-            EAP2(i,j) = 0;
+        if(EAP3(i,j) < rand_arr(3))
+            EAP3(i,j) = 0;
         end
     end
 end
