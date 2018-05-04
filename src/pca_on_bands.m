@@ -10,7 +10,7 @@ new_std = std(new_mat);
 
 EAP8 = (new_std*ones(size(new1,1),size(new1,2)) - new1);
 
-rand_arr = randi([max(max(new1)) min(min(new1))], 1, 10);
+rand_arr = randi([uint8(min(min(new1))) uint8(max(max(new1)))], 1, 10);
 
 EAP1 = new1;
 for i = 1:size(new1,1)
