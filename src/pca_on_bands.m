@@ -74,3 +74,33 @@ for i = 1:size(new1,1)
         end
     end
 end
+
+A = zeros(size(new1),'double');
+A = A + double(EAP1);
+A = imfuse(A, EAP2, 'blend', 'Scaling', 'joint');
+A = imfuse(A, EAP3, 'blend', 'Scaling', 'joint');
+A = imfuse(A, EAP4, 'blend', 'Scaling', 'joint');
+A = imfuse(A, EAP5, 'blend', 'Scaling', 'joint');
+A = imfuse(A, EAP6, 'blend', 'Scaling', 'joint');
+A = imfuse(A, EAP7, 'blend', 'Scaling', 'joint');
+A = imfuse(A, EAP8, 'blend', 'Scaling', 'joint');
+
+figure;
+imagesc(A);
+colorbar;
+
+for i=1:size(A,1)
+    for j=1:size(A,2)
+        if(A(i,j) < 209)
+            A(i,j) = 0;
+        elseif(A(i,j) > 212)
+            A(i,j) = 0;
+        end
+    end
+end
+
+A=A(1:2:end,1:2:end);
+size(A)
+figure;
+imagesc(A);
+colorbar
